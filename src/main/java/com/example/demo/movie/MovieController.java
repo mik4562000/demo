@@ -1,21 +1,22 @@
-package com.example.demo.controllers;
+package com.example.demo.movie;
 
-import com.example.demo.models.Movie;
-import com.example.demo.services.MovieService;
+import com.example.demo.movie.model.Movie;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController()
 @RequestMapping("/movie")
-public class MovieController {
+class MovieController {
 
-    MovieService service;
+    private final MovieService service;
 
     public MovieController(MovieService service) {
         this.service = service;
     }
 
     @GetMapping("/search")
-    public Movie[] search() {
+    public List<Movie> search() {
         return service.getMovieList();
     }
 
@@ -25,8 +26,8 @@ public class MovieController {
     }
 
     @PostMapping
-    public Movie newMovie(@RequestBody Movie newMovie) {
-        return service.addMovie(newMovie);
+    public Integer add(@RequestBody Movie movie) {
+        return service.addMovie(movie);
     }
 
 }

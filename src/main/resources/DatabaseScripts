@@ -1,0 +1,16 @@
+psql -U postgres -d postgres;
+
+create table movie(
+movie_id serial primary key,
+movie_name varchar(100) not null,
+release_year integer,
+country_name varchar(100) );
+
+INSERT INTO movie (movie_name, release_year, country_name)
+VALUES ('The Shawshank Redemption', 1994, 'United States');
+
+INSERT INTO movie (movie_name, release_year, country_name)
+VALUES ('The Godfather', 1972, 'United States');
+
+INSERT INTO movie (movie_name, release_year, country_name)
+VALUES ('Pulp Fiction', 1994, 'United States');

@@ -1,14 +1,12 @@
-package com.example.demo.models;
+package com.example.demo.movie.model;
 
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-
-public class Movie {
+public class Movie1111 {
     private String MovieName;
     private int ReleaseYear;
     private String CountryName;
 
-    public Movie(String MovieName, int ReleaseYear, String CountryName) {
+    public Movie1111(String MovieName, int ReleaseYear, String CountryName) {
         this.MovieName = MovieName;
         this.ReleaseYear = ReleaseYear;
         this.CountryName = CountryName;
