@@ -8,7 +8,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
+//@Repository
 class MovieRepository implements IMovieRepository {
     private static final String URL = "jdbc:postgresql://localhost/postgres";
     private static final String USER = "postgres";
