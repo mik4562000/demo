@@ -10,12 +10,9 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
+@RequiredArgsConstructor
 class MovieRepositoryJdbcTmpl implements IMovieRepository {
     private final NamedParameterJdbcTemplate jdbcTemplate;
-
-    MovieRepositoryJdbcTmpl(NamedParameterJdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
 
     @Override
     public List<Movie> getMovieList() {
