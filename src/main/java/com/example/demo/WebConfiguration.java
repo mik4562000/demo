@@ -7,7 +7,6 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
@@ -17,7 +16,7 @@ public class WebConfiguration implements WebMvcConfigurer {
     public ResourceBundleMessageSource translationSource(){
         final List<String> additionalBundles = List.of("translations");//AAAA
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-        String[] bundlesArray = additionalBundles.toArray(new String[0]);;
+        String[] bundlesArray = additionalBundles.toArray(new String[0]);
         messageSource.setBasenames(bundlesArray);
         messageSource.setDefaultEncoding("UTF-8");
         return messageSource;
