@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01_init
+      author: liz
+      changes:
+        - tagDatabase:
+            tag: 01_init
+  - include:
+      file: create_scheme_demo.sql
+      relativeToChangelogFile: true
+  - include:
+      file: create_user_demo.sql
+      relativeToChangelogFile: true

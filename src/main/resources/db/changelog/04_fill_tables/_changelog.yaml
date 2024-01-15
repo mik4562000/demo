@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 04_fill_tables
+      author: liz
+      changes:
+        - tagDatabase:
+            tag: 04_fill_tables
+  - include:
+      file: fill_table_country.sql
+      relativeToChangelogFile: true
+  - include:
+      file: fill_table_genre.sql
+      relativeToChangelogFile: true
+  - include:
+      file: fill_table_parents_guide.sql
+      relativeToChangelogFile: true
+  - include:
+      file: fill_table_movie.sql
+      relativeToChangelogFile: true
+  - include:
+      file: fill_table_movie_genre.sql
+      relativeToChangelogFile: true
+

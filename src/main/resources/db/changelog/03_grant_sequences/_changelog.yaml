@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 03_grant_sequences
+      author: liz
+      changes:
+        - tagDatabase:
+            tag: 03_grant_sequences
+  - include:
+      file: grant_sequences.sql
+      relativeToChangelogFile: true
+

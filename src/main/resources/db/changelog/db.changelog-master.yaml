@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - preConditions:
+      - runningAs:
+          username: demo_liquibase
+  - include:
+      file: 01_init/_changelog.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 02_create_tables/_changelog.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 03_grant_sequences/_changelog.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 04_fill_tables/_changelog.yaml
+      relativeToChangelogFile: true

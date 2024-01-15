@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 02_create_tables
+      author: liz
+      changes:
+        - tagDatabase:
+            tag: 02_create_tables
+  - include:
+      file: create_table_country.sql
+      relativeToChangelogFile: true
+  - include:
+      file: create_table_genre.sql
+      relativeToChangelogFile: true
+  - include:
+      file: create_table_parents_guide.sql
+      relativeToChangelogFile: true
+  - include:
+      file: create_table_movie.sql
+      relativeToChangelogFile: true
+  - include:
+      file: create_table_movie_genre.sql
+      relativeToChangelogFile: true
+

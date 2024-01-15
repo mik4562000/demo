@@ -1,0 +1,16 @@
+version: "1"
+
+services:
+  demo-pg:
+    image: postgres:14.0
+    ports:
+      - "5432:5432"
+    networks:
+      - app
+    environment:
+      POSTGRES_DB: "demo"
+      POSTGRES_USER: "demo_liquibase"
+      POSTGRES_PASSWORD: "demo"
+    restart: always
+networks:
+  app:
